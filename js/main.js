@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   getMe();
 
   async function getMe(){
-	let me_res = await fetch('http://aizhan/get/me');
+	let me_res = await fetch('http://kinotower/get/me');
 	let me = await me_res.json();
 	const header_me = document.getElementById('header_me');
 	header_me.textContent = 'Привет, ' + me;
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function openUsersTab() {
     contentTitle.textContent = "Пользователи";
-    let res = await fetch("http://aizhan/get/users");
+    let res = await fetch("http://kinotower/get/users");
     let users = await res.json();
     document.querySelector(".content-wrap").innerHTML = `
 			<a href="/new/user" class="btn btn-primary mb-3">Добавить нового пользователя</a>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function openFilmsTab() {
     contentTitle.textContent = "Фильмы";
-    let res = await fetch("http://aizhan/get/films");
+    let res = await fetch("http://kinotower/get/films");
     let films = await res.json();
     document.querySelector(".content-wrap").innerHTML = "";
     document.querySelector(".content-wrap").innerHTML = `
